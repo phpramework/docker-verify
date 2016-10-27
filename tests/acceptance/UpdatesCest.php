@@ -39,19 +39,6 @@ class UpdatesCest
         }
     }
 
-    public function tryToTestDefaultQueriesAre1(AcceptanceTester $I)
-    {
-        $I->sendGET($this->generateUri());
-
-        $I->seeResponseCodeIs(\Codeception\Util\HttpCode::OK);
-        $I->seeResponseIsJson();
-
-        $I->seeResponseMatchesJsonType([
-            'id' => 'integer',
-            'randomNumber' => 'integer'
-        ], '$.[0]');
-    }
-
     public function tryToTestMaxAre500Queries(AcceptanceTester $I)
     {
         $queries = 501;
