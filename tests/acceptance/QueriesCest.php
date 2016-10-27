@@ -42,7 +42,7 @@ class QueriesCest
     public function tryToTestMaxAre500Queries(AcceptanceTester $I)
     {
         $queries = 501;
-        $I->sendGET($this->generateUri());
+        $I->sendGET($this->generateUri($queries));
 
         $I->seeResponseCodeIs(\Codeception\Util\HttpCode::OK);
         $I->seeResponseIsJson();
