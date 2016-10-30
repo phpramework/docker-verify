@@ -16,6 +16,6 @@ modules:
     config:
         REST:
             depends: PhpBrowser
-            url: 'http://%SERVER_HOST%:%SERVER_PORT%'
+            url: http://app-server
 params:
     - env

@@ -12,9 +12,7 @@ COPY codeception.yml /project/codeception.yml
 
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
-ENV SERVER_HOST=localhost \
-    SERVER_PORT=8080 \
-    URI_JSON=/json \
+ENV URI_JSON=/json \
     URI_DB=/db \
     URI_QUERIES=/queries/ \
     URI_UPDATES=/updates/ \
