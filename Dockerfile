@@ -7,6 +7,9 @@ RUN curl -L http://codeception.com/codecept.phar > /usr/local/bin/codecept \
     && composer global require flow/jsonpath \
     && rm -rf /var/cache/apk/* /var/tmp/* /tmp/*
 
+RUN mkdir -p /result
+VOLUME /result
+
 COPY tests /project/tests
 COPY codeception.yml /project/codeception.yml
 
