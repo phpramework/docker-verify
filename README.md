@@ -1,5 +1,6 @@
 ## Environment Variables
 
+* `FRAMEWORK`: Framework name.
 * `URI_JSON`: URI for JSON Test. Default to `/json`.
 * `URI_DB`: URI for Single Query Test. Default to `/db`.
 * `URI_QUERIES`: URI for Multiple Query Test. Default to `/queries/`.
