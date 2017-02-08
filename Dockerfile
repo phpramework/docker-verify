@@ -20,6 +20,8 @@ RUN curl -L http://codeception.com/releases/$CODECEPT_VERSION/codecept.phar > /u
 
 RUN rm -rf /var/cache/apk/* /var/tmp/* /tmp/* $COMPOSER_HOME/cache/*
 
+RUN mkdir -p /result \
+    && chmod -R 0777 /result
 VOLUME /result
 
 COPY tests /project/tests
